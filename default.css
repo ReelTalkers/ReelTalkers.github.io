@@ -107,4 +107,5 @@ body.loading>* {
   position: relative;
   left: 50%;
   transform: translatex(-50%);
+  display: inline-block;
 }

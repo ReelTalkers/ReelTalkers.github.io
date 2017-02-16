@@ -15,6 +15,7 @@
           <source src="./assets/Let-It-Grow/Let-It-Grow.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
           <source src="./assets/Let-It-Grow/Let-It-Grow.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
         </video>
+        <canvas class="canvas"></canvas>
         <div class="default-fallback-image">
           <img src="./assets/Let-It-Grow/Let-It-Grow.jpg" alt="">
         </div>
@@ -34,5 +35,23 @@
       <p>We're currently sprouting.<span class="line-break"> </span>If only there were more sun in Cleveland.</p>
     </div>
 
+    <script src="https://stanko.github.io/html-canvas-video-player/js/canvas-video-player.js"></script>
+    <script>
+      var isIOS = /iPad|iPhone|iPod/.test(navigator.platform);
+      if (isIOS) {
+        var canvasVideo = new CanvasVideoPlayer({
+          videoSelector: '.video',
+          canvasSelector: '.canvas',
+          timelineSelector: false,
+          autoplay: true,
+          makeLoop: true,
+          pauseOnClick: false,
+          audio: false
+        });
+      }else {
+        // Use HTML5 video
+        document.querySelectorAll('.canvas')[0].style.display = 'none';
+      }
+    </script>
   </body>
 </html>

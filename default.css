@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    padding: 20px;
+    padding-top: 20px
+}
+body>* {
+    transition: opacity .3s ease-in-out
+}
+body.loading>* {
+    opacity: 0
+}
+.align-content-center-vertical {
+    height: 100%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+.text-align-center {
+    text-align: center
+}
+
+.color-dark {
+    background-color: #181818
+}
+.color-dark .content {
+    color: #ddd
+}
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%
+}
+.highlight {
+  background-color: black;
+  padding: 0px 10px;
+}
+.content {
+    position: relative;
+    font-family: Montserrat, Helvetica, Arial, sans-serif;
+    width: 100%
+}
+.content h1 {
+    display: inline-block;
+    font-size: 100px;
+    font-weight: 100;
+    line-height: 1em;
+    margin-bottom: .25em
+}
+.content p {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.4em
+}
+.footer {
+    position: absolute;
+    bottom: 44px;
+    width: calc(100% - 40px)
+}
+@media (max-width: 455px) {
+    .content h1 {
+        font-size: 60px
+    }
+    .content p {
+        font-size: 13px
+    }
+    .content .line-break {
+        display: block
+    }
+}
+@media (max-height: 375px) {
+    .align-content-center-vertical {
+        display: block
+    }
+}
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+    opacity: 0.5;
+}
+.video-background .background-video,
+.video-background .default-fallback-image {
+  position: relative;
+  left: 50%;
+  transform: translatex(-50%);
+}

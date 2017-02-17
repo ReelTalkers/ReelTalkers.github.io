@@ -87,6 +87,12 @@ body.loading>* {
         display: block
     }
 }
+/* To remove on mobile when ios  or android doesnt catch */
+@media screen and (max-width:480px) {
+  .video-background .background-video {
+    display: none !important;
+  }
+}
 @media (max-height: 375px) {
     .align-content-center-vertical {
         display: block

@@ -108,10 +108,17 @@ body.loading>* {
     overflow: hidden;
     opacity: 0.5;
 }
-.video-background .background-video,
-.video-background .default-fallback-image {
+.video-background .background-video {
   position: relative;
   left: 50%;
   transform: translatex(-50%);
   display: inline-block;
+}
+
+.video-background .default-fallback-image {
+  width: 100vw;
+  height: 100%;
+  background-position: center center;
+  background-image: url(./assets/Let-It-Grow/Let-It-Grow.jpg);
+  min-height: 1080;
 }
